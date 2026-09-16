@@ -10,6 +10,7 @@ abstract class TestCase extends BaseTestCase
     {
         foreach ([
             'APP_ENV' => 'testing',
+            'APP_KEY' => 'base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=',
             'APP_LOCALE' => 'es',
             'APP_FALLBACK_LOCALE' => 'es',
             'APP_FAKER_LOCALE' => 'es_ES',
