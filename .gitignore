@@ -24,6 +24,13 @@
 /storage/*.key
 /storage/pail
 /vendor
+.agents/
+.claude/
+AGENTS.md
+CLAUDE.md
+/.mcp.json
+/boost.json
+/skills-lock.json
 _ide_helper.php
 Homestead.json
 Homestead.yaml

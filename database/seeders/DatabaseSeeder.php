@@ -17,6 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        if (! app()->environment(['local', 'testing'])) {
+            return;
+        }
+
         User::query()->updateOrCreate(
             ['email' => 'admin@kanban.test'],
             [
