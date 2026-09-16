@@ -1,0 +1,411 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+.kanban-login-page .fi-simple-page-content {
+    row-gap: 0;
+}
+
+.kanban-login-shell {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    border-radius: 1.5rem;
+    background: var(--color-white);
+    box-shadow: 0 24px 80px -48px rgb(15 23 42 / 45%);
+}
+
+.kanban-login-story {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    min-height: 40rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.5rem;
+    overflow: hidden;
+    padding: clamp(2rem, 5vw, 4rem);
+    color: white;
+    background: linear-gradient(145deg, var(--primary-950) 0%, var(--primary-800) 58%, var(--primary-600) 140%);
+}
+
+.kanban-login-story::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(to right, rgb(255 255 255 / 12%) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(255 255 255 / 12%) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    content: '';
+    mask-image: linear-gradient(to bottom, black, transparent 82%);
+    opacity: .55;
+}
+
+.kanban-login-story::after {
+    position: absolute;
+    top: -16rem;
+    right: -12rem;
+    z-index: -1;
+    width: 34rem;
+    height: 34rem;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 9999px;
+    box-shadow: 0 0 0 3rem rgb(255 255 255 / 4%), 0 0 0 6rem rgb(255 255 255 / 3%);
+    content: '';
+}
+
+.kanban-login-story > * {
+    position: relative;
+    z-index: 1;
+}
+
+.kanban-login-brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+}
+
+.kanban-login-brand-mark {
+    display: flex;
+    height: 2.5rem;
+    align-items: flex-end;
+    gap: .25rem;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: .8rem;
+    padding: .55rem;
+    background: rgb(255 255 255 / 10%);
+    box-shadow: inset 0 1px rgb(255 255 255 / 15%);
+}
+
+.kanban-login-brand-bar {
+    display: block;
+    width: .35rem;
+    height: .8rem;
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 80%);
+}
+
+.kanban-login-brand-bar:nth-child(2) {
+    height: 1.15rem;
+    background: rgb(153 246 228 / 90%);
+}
+
+.kanban-login-brand-bar:nth-child(3) {
+    height: 1.5rem;
+    background: white;
+}
+
+.kanban-login-story-copy {
+    max-width: 34rem;
+}
+
+.kanban-login-kicker,
+.kanban-login-eyebrow {
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.kanban-login-kicker {
+    margin-bottom: 1.25rem;
+    color: rgb(204 251 241 / 82%);
+}
+
+.kanban-login-story-copy h1 {
+    max-width: 28rem;
+    margin: 0;
+    font-size: clamp(2.35rem, 4vw, 4.2rem);
+    font-weight: 600;
+    letter-spacing: -.055em;
+    line-height: .98;
+}
+
+.kanban-login-story-copy > p:last-child {
+    max-width: 29rem;
+    margin-top: 1.5rem;
+    color: rgb(204 251 241 / 78%);
+    font-size: .98rem;
+    line-height: 1.7;
+}
+
+.kanban-login-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .65rem;
+    padding: 1rem;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 1.15rem;
+    background: rgb(2 44 47 / 28%);
+    box-shadow: 0 20px 50px -30px rgb(0 0 0 / 70%), inset 0 1px rgb(255 255 255 / 10%);
+    backdrop-filter: blur(12px);
+}
+
+.kanban-login-column {
+    min-width: 0;
+}
+
+.kanban-login-column-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-bottom: .6rem;
+    color: rgb(204 251 241 / 70%);
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.kanban-login-board-card {
+    display: flex;
+    min-height: 6.75rem;
+    flex-direction: column;
+    gap: .55rem;
+    margin-top: .55rem;
+    padding: .75rem;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: .8rem;
+    background: rgb(255 255 255 / 10%);
+    box-shadow: 0 10px 25px -18px rgb(0 0 0 / 70%);
+}
+
+.kanban-login-board-card--quiet {
+    min-height: 4rem;
+    opacity: .68;
+}
+
+.kanban-login-board-card--accent {
+    border-color: rgb(153 246 228 / 35%);
+    background: rgb(20 184 166 / 20%);
+}
+
+.kanban-login-board-card--done {
+    border-color: rgb(167 243 208 / 28%);
+    background: rgb(16 185 129 / 16%);
+}
+
+.kanban-login-board-card-line {
+    display: block;
+    width: 1.5rem;
+    height: .25rem;
+    border-radius: 9999px;
+    background: rgb(153 246 228 / 75%);
+}
+
+.kanban-login-board-card-title {
+    overflow: hidden;
+    color: white;
+    font-size: .72rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.kanban-login-board-card-meta {
+    margin-top: auto;
+    color: rgb(204 251 241 / 65%);
+    font-size: .62rem;
+}
+
+.kanban-login-story-footer {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgb(255 255 255 / 16%);
+    color: rgb(204 251 241 / 68%);
+    font-size: .75rem;
+    line-height: 1.5;
+}
+
+.kanban-login-story-index {
+    color: white;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+.kanban-login-form-panel {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 5rem);
+    background: var(--color-white);
+}
+
+.kanban-login-form-wrap {
+    width: 100%;
+    max-width: 28rem;
+    margin-inline: auto;
+}
+
+.kanban-login-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--primary-600);
+}
+
+.kanban-login-status-dot {
+    display: block;
+    width: .45rem;
+    height: .45rem;
+    border-radius: 9999px;
+    background: var(--primary-500);
+    box-shadow: 0 0 0 .25rem color-mix(in oklab, var(--primary-500) 15%, transparent);
+}
+
+.kanban-login-form-header h2 {
+    margin-top: 1rem;
+    color: var(--gray-950);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 600;
+    letter-spacing: -.045em;
+    line-height: 1.05;
+}
+
+.kanban-login-form-header p {
+    margin-top: .75rem;
+    color: var(--gray-500);
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.kanban-login-form {
+    margin-top: 2rem;
+}
+
+.kanban-login-form .fi-input-wrp {
+    border-radius: .8rem;
+}
+
+.kanban-login-form .fi-btn {
+    border-radius: .8rem;
+    box-shadow: 0 10px 22px -16px var(--primary-700);
+}
+
+.kanban-login-form-panel :is(input, a, button):focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 3px;
+}
+
+.kanban-login-security-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    margin-top: 1.75rem;
+    color: var(--gray-400);
+    font-size: .72rem;
+}
+
+.kanban-login-security-note .fi-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+@media (min-width: 64rem) {
+    .kanban-login-shell {
+        grid-template-columns: minmax(0, 1.08fr) minmax(24rem, .92fr);
+    }
+}
+
+@media (max-width: 63.999rem) {
+    .kanban-login-story {
+        min-height: 24rem;
+    }
+
+    .kanban-login-form-panel {
+        padding-block: 3rem;
+    }
+}
+
+@media (max-width: 47.999rem) {
+    .kanban-login-shell {
+        border-radius: 1.15rem;
+    }
+
+    .kanban-login-story {
+        min-height: auto;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .kanban-login-story-copy h1 {
+        font-size: 2.35rem;
+    }
+
+    .kanban-login-story-copy > p:last-child {
+        margin-top: 1rem;
+        font-size: .88rem;
+    }
+
+    .kanban-login-board,
+    .kanban-login-story-footer {
+        display: none;
+    }
+
+    .kanban-login-form-panel {
+        padding: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .kanban-login-board-card {
+        animation: kanban-login-card-in .55s cubic-bezier(.22, 1, .36, 1) both;
+    }
+
+    .kanban-login-board-card:nth-child(2) {
+        animation-delay: 80ms;
+    }
+
+    .kanban-login-board-card:nth-child(3) {
+        animation-delay: 150ms;
+    }
+}
+
+@keyframes kanban-login-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(.45rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+:where(.dark, .dark *) .kanban-login-shell {
+    border-color: color-mix(in oklab, var(--gray-700) 70%, transparent);
+    background: var(--gray-900);
+}
+
+:where(.dark, .dark *) .kanban-login-form-panel {
+    background: var(--gray-900);
+}
+
+:where(.dark, .dark *) .kanban-login-form-header h2 {
+    color: white;
+}
+
+:where(.dark, .dark *) .kanban-login-form-header p {
+    color: var(--gray-400);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kanban-login-board-card {
+        animation: none;
+    }
+}
