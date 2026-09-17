@@ -30,7 +30,7 @@ El despliegue de producción usa `docker-compose.coolify.yml` desde el repositor
 
 1. Crea una aplicación nueva desde el repositorio y selecciona el build pack **Docker Compose**.
 2. Configura `docker-compose.coolify.yml` como ubicación del Compose.
-3. Asigna el dominio al servicio `web` en el puerto interno `80`.
+3. Asigna el dominio únicamente al servicio `web` en el puerto interno `80`. No lo asignes a `app`: el puerto `9000` es FastCGI interno y no acepta tráfico HTTP.
 4. Define en Coolify `APP_URL`, `APP_KEY`, `DB_PASSWORD` y `MYSQL_ROOT_PASSWORD`.
 5. Revisa las variables de correo antes de activar los recordatorios por email.
 6. Despliega. El servicio `migrate` ejecuta `php artisan migrate --force` antes de iniciar la aplicación, worker y scheduler.

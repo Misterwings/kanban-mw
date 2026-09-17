@@ -68,8 +68,6 @@ services:
 
   app:
     <<: *app
-    expose:
-      - "9000"
     volumes:
       - kanban_storage:/var/www/storage/app/public
     depends_on:
