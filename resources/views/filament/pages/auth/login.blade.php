@@ -3,9 +3,7 @@
         <aside class="kanban-login-story" aria-labelledby="kanban-login-story-heading">
             <div class="kanban-login-brand">
                 <span class="kanban-login-brand-mark" aria-hidden="true">
-                    <span class="kanban-login-brand-bar"></span>
-                    <span class="kanban-login-brand-bar"></span>
-                    <span class="kanban-login-brand-bar"></span>
+                    <img src="{{ asset('images/logo_mw.png') }}" alt="" />
                 </span>
                 <span>{{ filament()->getBrandName() }}</span>
             </div>
