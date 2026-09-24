@@ -2,6 +2,12 @@
 
 Aplicación de gestión de proyectos y tareas construida con Laravel, Filament, Livewire y Tailwind CSS.
 
+## Documentación
+
+- [Manual de usuario](docs/MANUAL_DE_USUARIO.md): operación del sistema por perfil, proyectos, tablero, seguimiento, costos, clonación y solución de problemas.
+- [Documentación técnica](docs/DOCUMENTACION_TECNICA.md): arquitectura, modelo de datos, permisos, configuración, despliegue, pruebas y limitaciones conocidas.
+- [Índice de documentación](docs/README.md).
+
 ## Requisitos
 
 - PHP 8.3+
